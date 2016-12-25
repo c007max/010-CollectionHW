@@ -1,8 +1,4 @@
-import java.util.HashSet	;
-import java.util.Random	;
-import java.util.LinkedList ;
-import java.util.Collection	;
-import java.util.Iterator;
+import java.util.*	;
 
 public class CollectionSet {
 
@@ -10,20 +6,40 @@ public class CollectionSet {
 	public static void main(String[] args) 
 	{
 		int	nodeK	= 20	;
-		LinkedList<PCB> ll_top10	= new LinkedList<PCB>()	;
-		HashSet<Integer>	hs_int	= new HashSet<Integer>()	;
+		LinkedList<Integer>	ll_int	= new LinkedList<Integer>()	;
 		Random r1	= new Random();
 		
 		for (int ii=0 ;	ii<nodeK ;	ii++)
 		{
-			hs_int.add(r1.nextInt(1000));
+			ll_int.add(r1.nextInt(1000));
 		}
 		
-		Iterator<Integer> i1	= hs_int.iterator()	;		
+		Iterator<Integer> i1	= ll_int.iterator()	;		
 		while (i1.hasNext())
 		{
 			System.out.printf("int %d\n"	,i1.next());
 		}
-	}
+		
+		//	sort the list
+		Collections.sort(ll_int);
+		
+		System.out.println("");
+		
+		for	(int ii=0; ii<ll_int.size();	ii++)
+		{
+			System.out.printf("int %d\n"	,ll_int.get(ii))	;
+		}
 
+		System.out.println("");
+		
+		//	shuffle the list
+		Collections.shuffle(ll_int, r1)	;
+		
+		System.out.println("");
+		
+		for	(int ii=0; ii<ll_int.size();	ii++)
+		{
+			System.out.printf("int %d\n"	,ll_int.get(ii))	;
+		}
+	}
 }
