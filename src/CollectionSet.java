@@ -41,5 +41,14 @@ public class CollectionSet {
 		{
 			System.out.printf("int %d\n"	,ll_int.get(ii))	;
 		}
+				
+		TH_sort sort1	= new TH_sort	(ll_int
+				)	;
+		sort1.start()	;
+		
+		for	(int ii=0; ii<ll_int.size();	ii++)
+		{
+			System.out.printf("int %d\n"	,ll_int.get(ii))	;
+		}
 	}
 }
