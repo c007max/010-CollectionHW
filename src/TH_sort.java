@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class TH_sort extends Thread
@@ -15,7 +16,14 @@ public class TH_sort extends Thread
 		System.out.printf("\t>> th_sort start <<\n"	
 				);
 		
-		this.LL_int.sort(null);
+		Collections.reverse(LL_int);
+		
+		for	(int ii=0; ii<LL_int.size();	ii++)
+		{
+			System.out.printf("th_sort %d: %d\n"	
+					,ii+1
+					,LL_int.get(ii))	;
+		}
 		
 		System.out.printf("\t>> th_sort end <<\n"
 				);

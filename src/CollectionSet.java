@@ -20,35 +20,50 @@ public class CollectionSet {
 			System.out.printf("int %d\n"	,i1.next());
 		}
 		
-		//	sort the list
+		//	0050	sort the list
 		Collections.sort(ll_int);
 		
-		System.out.println("");
+		System.out.printf("\t>>> 0050 sort <<<\n");
 		
 		for	(int ii=0; ii<ll_int.size();	ii++)
 		{
-			System.out.printf("int %d\n"	,ll_int.get(ii))	;
+			System.out.printf("int %d: %d\n"	
+					,ii+1
+					,ll_int.get(ii))	;
 		}
-
-		System.out.println("");
-		
-		//	shuffle the list
+	
+		//	0100	shuffle the list
 		Collections.shuffle(ll_int, r1)	;
 		
-		System.out.println("");
+		System.out.printf("\t>>> 0100 shuffle <<<\n");
 		
 		for	(int ii=0; ii<ll_int.size();	ii++)
 		{
-			System.out.printf("int %d\n"	,ll_int.get(ii))	;
+			System.out.printf("int %d: %d\n"	
+					,ii+1
+					,ll_int.get(ii))	;
 		}
 				
-		TH_sort sort1	= new TH_sort	(ll_int
-				)	;
+		//	0150	reverse sort the list
+		
+		TH_sort sort1	= new TH_sort	(ll_int	)	;
 		sort1.start()	;
 		
-		for	(int ii=0; ii<ll_int.size();	ii++)
+		System.out.printf("\t>>> 0150 reverse sort <<<\n");
+		
+/*		for	(int ii=0; ii<ll_int.size();	ii++)
 		{
-			System.out.printf("int %d\n"	,ll_int.get(ii))	;
+			System.out.printf("int %d: %d\n"	
+					,ii+1
+					,ll_int.get(ii))	;
 		}
+*/
+		
+		//	0200	get max value
+		
+		System.out.println("\t>>> 0200 get max value <<<\n");
+		
+		TH_max	max1	= new TH_max	(ll_int);
+		max1.start();
 	}
 }
